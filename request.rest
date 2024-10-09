@@ -1,0 +1,94 @@
+// Create User Request
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Manav Chandak",
+    "email": "admin@gmail.com",
+    "password": "123456", 
+    "confPassword": "123456", 
+    "role": "admin"
+}
+
+###
+// get All Users
+GET http://localhost:5000/users
+
+###
+// get Single User
+GET http://localhost:5000/users/7168034e-e7a2-4188-ac8b-7966e69e3955
+
+###
+// Update A User
+PATCH  http://localhost:5000/users/7168034e-e7a2-4188-ac8b-7966e69e3955
+Content-Type: application/json
+
+{
+    "name": "Piyush Deolikar",
+    "email": "piyushd@gmail.com",
+    "password": "", 
+    "confPassword": "", 
+    "role": "user"
+}
+
+###
+// Delete User
+DELETE http://localhost:5000/users/12da0395-d49b-428a-9f43-5adbcc1e0c95
+
+###
+// Admin Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+// User Login 
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "piyushd@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+// Get All Products
+GET http://localhost:5000/products
+
+###
+// Get Single Products
+GET http://localhost:5000/products/4f00976d-f1c9-4370-b766-f9bdddb6c7c6
+
+###
+// Post Data Products
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 6",
+    "price": 400
+}
+
+###
+// Post Data Products
+PATCH http://localhost:5000/products/4f00976d-f1c9-4370-b766-f9bdddb6c7c6
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": 350
+}
+
+###
+// Delete Product
+DELETE http://localhost:5000/products/34529335-4385-4b5b-9d91-01d3e5c4e840
